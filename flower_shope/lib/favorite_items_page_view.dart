@@ -8,6 +8,7 @@ class FavoriteItemsPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           backgroundColor: Colors.white,
           elevation: 0,
           title: const Text("Favorite"),
@@ -24,11 +25,60 @@ class FavoriteItemsPageView extends StatelessWidget {
                 icon: const Icon(
                   Icons.notifications,
                   size: 25,
-                ))
+                )),
           ],
         ),
         body: Column(
           children: [
+            Container(
+              height: 1,
+              width: 360,
+              color: Colors.grey,
+            ),
+            Stack(
+              children: [
+                Container(
+                  height: 130,
+                  width: MediaQuery.of(context).size.width,
+                  color: Color(0xffFDEEF1),
+                ),
+                const Positioned(
+                    top: 56,
+                    left: 30,
+                    child: Text(
+                      "Your favorite collections\nIn one place",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    )),
+                const Positioned(
+                    top: 150,
+                    left: 30,
+                    child: Row(
+                      children: [
+                        Text(
+                          "Welcome",
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                      ],
+                    )
+                    // Text('Welcome ${widget.username}'),
+                    ),
+                Positioned(
+                    top: 40,
+                    right: 3,
+                    child: Image.asset(
+                      "assets/Bouquet.png",
+                      height: 100,
+                    ))
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -60,10 +110,10 @@ class FavoriteItemsPageView extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 120,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.favorite,
                         color: Colors.red,
                         size: 20,
@@ -73,7 +123,7 @@ class FavoriteItemsPageView extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Row(
@@ -107,10 +157,10 @@ class FavoriteItemsPageView extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        width: 120,
+                      const SizedBox(
+                        width: 112,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.favorite,
                         color: Colors.red,
                         size: 20,

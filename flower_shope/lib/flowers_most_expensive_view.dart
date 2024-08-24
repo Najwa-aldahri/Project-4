@@ -84,13 +84,11 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePageView(),
+                    builder: (context) => const HomePageView(phonenumber: "",username: "",),
                   ),
                 );
               },
             ),
-            
-            
             ExpansionTile(
               title: Text("Sort by.."),
               leading: Icon(Icons.filter_alt_rounded),
@@ -139,12 +137,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
           ],
         ),
       ),
-      body:
-          // IndexedStack(
-          //   index: selectedIndex,
-          //   children: [
-          //     // Home Page Content (when selectedIndex is 0)
-          Column(
+      body: Column(
         children: [
           Row(
             children: [
@@ -188,71 +181,61 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ItemPageView(),
-                          ),
-                        );
-                      },
-                      child: isLoading
-                          ? Shimmer(
-                              duration: const Duration(seconds: 7),
-                              color: const Color.fromARGB(255, 248, 244, 210),
-                              child: Container(
-                                height: 148,
-                                width: 100,
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 209, 208, 208),
-                                  borderRadius: BorderRadius.circular(5),
-                                ),
-                              ),
-                            )
-                          : Container(
+                    isLoading
+                        ? Shimmer(
+                            duration: const Duration(seconds: 7),
+                            color: const Color.fromARGB(255, 248, 244, 210),
+                            child: Container(
+                              height: 148,
                               width: 100,
-                              child: Column(
-                                children: [
-                                  Image.asset(
-                                    "assets/flowers/big_flowers.png",
-                                  ),
-                                  Row(
-                                    children: [
-                                      Text(
-                                        " Spring\n Blossom",
-                                        style: TextStyle(
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w500,
-                                        ),
-                                      ),
-                                      SizedBox(width: 23),
-                                      InkWell(
-                                        onTap: () {
-                                          iconcolor_heart1 = Colors.red;
-                                          setState(() {});
-                                        },
-                                        onLongPress: () {
-                                          iconcolor_heart1 = Colors.black;
-                                          setState(() {});
-                                        },
-                                        child: Icon(
-                                          Icons.favorite,
-                                          color: iconcolor_heart1,
-                                          size: 15,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const Row(
-                                    children: [
-                                      Text(" 2500 SR"),
-                                    ],
-                                  ),
-                                ],
+                              decoration: BoxDecoration(
+                                color: Color.fromARGB(255, 209, 208, 208),
+                                borderRadius: BorderRadius.circular(5),
                               ),
                             ),
-                    ),
+                          )
+                        : Container(
+                            width: 100,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  "assets/flowers/big_flowers.png",
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      " Spring\n Blossom",
+                                      style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    SizedBox(width: 23),
+                                    InkWell(
+                                      onTap: () {
+                                        iconcolor_heart1 = Colors.red;
+                                        setState(() {});
+                                      },
+                                      onLongPress: () {
+                                        iconcolor_heart1 = Colors.black;
+                                        setState(() {});
+                                      },
+                                      child: Icon(
+                                        Icons.favorite,
+                                        color: iconcolor_heart1,
+                                        size: 15,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const Row(
+                                  children: [
+                                    Text(" 2500 SR"),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                     isLoading
                         ? Shimmer(
                             duration: const Duration(seconds: 7),

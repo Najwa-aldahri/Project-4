@@ -2,13 +2,18 @@ import 'package:flower_shope/account_page_view.dart';
 import 'package:flower_shope/favorite_items_page_view.dart';
 import 'package:flower_shope/flowers_page_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePageView extends StatefulWidget {
-  const HomePageView({super.key});
+  final String username;
+  final String phonenumber;
+
+  const HomePageView({
+    Key? key,
+    required this.username,
+    required this.phonenumber,
+  }) : super(key: key);
 
   @override
   State<HomePageView> createState() => _HomePageViewState();
@@ -42,6 +47,30 @@ class _HomePageViewState extends State<HomePageView> {
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w600),
                         )),
+                    Positioned(
+                        top: 150,
+                        left: 30,
+                        child: Row(
+                          children: [
+                            Text(
+                              "Welcome",
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.w600),
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "${widget.username}",
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.pink.shade200),
+                            )
+                          ],
+                        )
+                        // Text('Welcome ${widget.username}'),
+                        ),
                     Positioned(
                         top: 50,
                         right: 3,
@@ -209,7 +238,10 @@ class _HomePageViewState extends State<HomePageView> {
           // Favorites Screen
           FavoriteItemsPageView(),
           // Account Screen
-          AccountPageView(),
+          AccountPageView(
+            username: widget.username,
+            phonenumber: widget.phonenumber,
+          ),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
