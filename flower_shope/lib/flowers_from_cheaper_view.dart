@@ -1,7 +1,6 @@
 import 'package:flower_shope/flowers_most_expensive_view.dart';
 import 'package:flower_shope/flowers_page_view.dart';
 import 'package:flower_shope/home_page_view.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -23,10 +22,15 @@ class FlowersFromCheaperView extends StatefulWidget {
 }
 
 class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart1 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart2 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart3 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart4 = Colors.black;
+
 
 //for the shimmer effect
   late bool isLoading;
@@ -184,7 +188,7 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                         height: 148,
                         width: 100,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 209, 208, 208),
+                          color: const Color.fromARGB(255, 209, 208, 208),
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
@@ -200,14 +204,14 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                           ),
                           Row(
                             children: [
-                              Text(
+                              const Text(
                                 " Pink\n Paradise",
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              SizedBox(width: 23),
+                              const SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
                                   iconcolor_heart1 = Colors.red;
@@ -257,7 +261,7 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                         height: 148,
                         width: 100,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 209, 208, 208),
+                          color: const Color.fromARGB(255, 209, 208, 208),
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
@@ -271,14 +275,14 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                           ),
                           Row(
                             children: [
-                              Text(
+                              const Text(
                                 " Spring\n Blossom",
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              SizedBox(width: 23),
+                              const SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
                                   iconcolor_heart2 = Colors.red;
@@ -319,7 +323,7 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                       )),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -333,7 +337,7 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                         height: 148,
                         width: 100,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 209, 208, 208),
+                          color: const Color.fromARGB(255, 209, 208, 208),
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
@@ -348,14 +352,14 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                           ),
                           Row(
                             children: [
-                              Text(
+                              const Text(
                                 " winter\n Flower",
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              SizedBox(width: 23),
+                              const SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
                                   iconcolor_heart3 = Colors.red;
@@ -402,7 +406,7 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                         height: 148,
                         width: 100,
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 209, 208, 208),
+                          color: const Color.fromARGB(255, 209, 208, 208),
                           borderRadius: BorderRadius.circular(5),
                         ),
                       ),
@@ -417,14 +421,14 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                           ),
                           Row(
                             children: [
-                              Text(
+                              const Text(
                                 " Royal\n Splendor",
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              SizedBox(width: 23),
+                              const SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
                                   iconcolor_heart4 = Colors.red;

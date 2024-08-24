@@ -37,7 +37,7 @@ class _ItemPageViewState extends State<ItemPageView> {
             actions: [
               IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.notifications,
                     size: 25,
                   ))
@@ -45,7 +45,7 @@ class _ItemPageViewState extends State<ItemPageView> {
           ),
           body: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Center(
@@ -74,7 +74,7 @@ class _ItemPageViewState extends State<ItemPageView> {
                   children: [
                     Column(
                       children: [
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.all(20.0),
                           child: Text(
                             "Beautifully crafted flowers for every occasion. Brighten someone's day with our fresh and elegant arrangements.",
@@ -140,7 +140,7 @@ class _ItemPageViewState extends State<ItemPageView> {
                     ),
                     Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Row(
@@ -251,7 +251,7 @@ class _ItemPageViewState extends State<ItemPageView> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Row(

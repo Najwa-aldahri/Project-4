@@ -37,9 +37,9 @@ class _HomePageViewState extends State<HomePageView> {
                     Container(
                       height: 200,
                       width: MediaQuery.of(context).size.width,
-                      color: Color(0xffFDEEF1),
+                      color: const Color(0xffFDEEF1),
                     ),
-                    Positioned(
+                    const Positioned(
                         top: 96,
                         left: 30,
                         child: Text(
@@ -52,12 +52,12 @@ class _HomePageViewState extends State<HomePageView> {
                         left: 30,
                         child: Row(
                           children: [
-                            Text(
+                            const Text(
                               "Welcome",
                               style: TextStyle(
                                   fontSize: 16, fontWeight: FontWeight.w600),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Text(
@@ -80,21 +80,21 @@ class _HomePageViewState extends State<HomePageView> {
                         ))
                   ],
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 SizedBox(
                     width: 300,
                     height: 50,
                     child: TextField(
                         decoration: InputDecoration(
                       hintText: "Search",
-                      prefixIcon: Icon(
+                      prefixIcon: const Icon(
                         Icons.search,
                       ),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(color: Colors.grey)),
+                          borderSide: const BorderSide(color: Colors.grey)),
                     ))),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -113,7 +113,7 @@ class _HomePageViewState extends State<HomePageView> {
                           height: 160,
                           width: 120,
                           decoration: BoxDecoration(
-                              color: Color(0xffE4ECDC),
+                              color: const Color(0xffE4ECDC),
                               borderRadius: BorderRadius.circular(13)),
                           child: Stack(
                             children: [
@@ -143,7 +143,7 @@ class _HomePageViewState extends State<HomePageView> {
                         height: 160,
                         width: 120,
                         decoration: BoxDecoration(
-                            color: Color(0xffE1DCEC),
+                            color: const Color(0xffE1DCEC),
                             borderRadius: BorderRadius.circular(13)),
                         child: Stack(
                           children: [
@@ -170,7 +170,7 @@ class _HomePageViewState extends State<HomePageView> {
                         )),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -178,7 +178,7 @@ class _HomePageViewState extends State<HomePageView> {
                         height: 160,
                         width: 120,
                         decoration: BoxDecoration(
-                            color: Color(0xffF9E8C6),
+                            color: const Color(0xffF9E8C6),
                             borderRadius: BorderRadius.circular(13)),
                         child: Stack(
                           children: [
@@ -207,7 +207,7 @@ class _HomePageViewState extends State<HomePageView> {
                         height: 160,
                         width: 120,
                         decoration: BoxDecoration(
-                            color: Color(0xffFED0E6),
+                            color: const Color(0xffFED0E6),
                             borderRadius: BorderRadius.circular(13)),
                         child: Stack(
                           children: [
@@ -234,12 +234,12 @@ class _HomePageViewState extends State<HomePageView> {
                         )),
                   ],
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
               ],
             ),
           ),
           // Favorites Screen
-          FavoriteItemsPageView(),
+          const FavoriteItemsPageView(),
           // Account Screen
           AccountPageView(
             username: widget.username,
@@ -250,7 +250,7 @@ class _HomePageViewState extends State<HomePageView> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        selectedItemColor: Color(0xff1F1D36),
+        selectedItemColor: const Color(0xff1F1D36),
         unselectedItemColor: Colors.grey,
         selectedFontSize: 14,
         unselectedFontSize: 14,

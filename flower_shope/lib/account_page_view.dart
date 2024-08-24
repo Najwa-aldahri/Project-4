@@ -66,14 +66,14 @@ class _AccountPageViewState extends State<AccountPageView> {
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Icon(Icons.person),
+                        const Icon(Icons.person),
                         Text("  ${widget.username}")
                       ],
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -85,10 +85,10 @@ class _AccountPageViewState extends State<AccountPageView> {
                     ),
                     child: Row(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
-                        Icon(Icons.phone),
+                        const Icon(Icons.phone),
                         Text("  ${widget.phonenumber}")
                       ],
                     ))
@@ -119,7 +119,7 @@ class RPSCustomPainter extends CustomPainter {
     path_0.close();
 
     Paint paint_0_fill = Paint()..style = PaintingStyle.fill;
-    paint_0_fill.color = Color(0xffFFE7EB).withOpacity(1.0);
+    paint_0_fill.color = const Color(0xffFFE7EB).withOpacity(1.0);
     canvas.drawPath(path_0, paint_0_fill);
   }
 

@@ -22,9 +22,13 @@ class FlowersPageView extends StatefulWidget {
 }
 
 class _FlowersPageViewState extends State<FlowersPageView> {
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart1 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart2 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart3 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart4 = Colors.black;
   @override
   Widget build(BuildContext context) {
@@ -35,13 +39,13 @@ class _FlowersPageViewState extends State<FlowersPageView> {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: FaIcon(
+              icon: const FaIcon(
                 FontAwesomeIcons.cartShopping,
                 size: 20,
               )),
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.notifications,
                 size: 25,
               ))
@@ -53,7 +57,7 @@ class _FlowersPageViewState extends State<FlowersPageView> {
           children: [
             ListTile(
               title: const Text('Home Screen'),
-              leading: Icon(Icons.home),
+              leading: const Icon(Icons.home),
               onTap: () {
                 Navigator.push(
                   context,
@@ -67,9 +71,9 @@ class _FlowersPageViewState extends State<FlowersPageView> {
               },
             ),
             ExpansionTile(
-              title: Text("Sort by.."),
-              leading: Icon(Icons.filter_alt_rounded),
-              childrenPadding: EdgeInsets.only(left: 60),
+              title: const Text("Sort by.."),
+              leading: const Icon(Icons.filter_alt_rounded),
+              childrenPadding: const EdgeInsets.only(left: 60),
               children: [
                 ListTile(
                   title: const Text('All..'),
@@ -116,7 +120,7 @@ class _FlowersPageViewState extends State<FlowersPageView> {
               ],
             ),
             ListTile(
-              contentPadding: EdgeInsets.only(left: 30),
+              contentPadding: const EdgeInsets.only(left: 30),
               title: const Text('Q&A'),
               onTap: () {},
             ),
@@ -150,14 +154,14 @@ class _FlowersPageViewState extends State<FlowersPageView> {
               child: TextField(
                   decoration: InputDecoration(
                 hintText: "Search",
-                prefixIcon: Icon(
+                prefixIcon: const Icon(
                   Icons.search,
                 ),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(color: Colors.grey)),
+                    borderSide: const BorderSide(color: Colors.grey)),
               ))),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -183,14 +187,14 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                           ),
                           Row(
                             children: [
-                              Text(
+                              const Text(
                                 " Spring\n Blossom",
                                 style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.w500,
                                 ),
                               ),
-                              SizedBox(width: 23),
+                              const SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
                                   iconcolor_heart1 = Colors.red;
@@ -228,14 +232,14 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             " Pink\n Garden",
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(width: 23),
+                          const SizedBox(width: 23),
                           InkWell(
                             onTap: () {
                               iconcolor_heart2 = Colors.red;
@@ -262,7 +266,7 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                   )),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -278,14 +282,14 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             " Royal\n Flower",
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(width: 23),
+                          const SizedBox(width: 23),
                           InkWell(
                             onTap: () {
                               iconcolor_heart3 = Colors.red;
@@ -320,14 +324,14 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                       ),
                       Row(
                         children: [
-                          Text(
+                          const Text(
                             " Pink\n Rose",
                             style: TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(width: 23),
+                          const SizedBox(width: 23),
                           InkWell(
                             onTap: () {
                               iconcolor_heart4 = Colors.red;

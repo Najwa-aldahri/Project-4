@@ -22,9 +22,13 @@ class FlowersMostExpensive extends StatefulWidget {
 }
 
 class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart1 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart2 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart3 = Colors.black;
+  // ignore: non_constant_identifier_names
   Color iconcolor_heart4 = Colors.black;
 
 //for the shimmer effect
@@ -49,14 +53,14 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
         actions: [
           IconButton(
             onPressed: () {},
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.cartShopping,
               size: 20,
             ),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.notifications,
               size: 25,
             ),
@@ -68,7 +72,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
           children: [
             ListTile(
               title: const Text('Home Screen'),
-              leading: Icon(Icons.home),
+              leading: const Icon(Icons.home),
               onTap: () {
                 Navigator.push(
                   context,
@@ -82,9 +86,9 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
               },
             ),
             ExpansionTile(
-              title: Text("Sort by.."),
-              leading: Icon(Icons.filter_alt_rounded),
-              childrenPadding: EdgeInsets.only(left: 60),
+              title: const Text("Sort by.."),
+              leading: const Icon(Icons.filter_alt_rounded),
+              childrenPadding: const EdgeInsets.only(left: 60),
               children: [
                 ListTile(
                   title: const Text('All..'),
@@ -131,7 +135,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
               ],
             ),
             ListTile(
-              contentPadding: EdgeInsets.only(left: 30),
+              contentPadding: const EdgeInsets.only(left: 30),
               title: const Text('Q&A'),
               onTap: () {},
             ),
@@ -160,22 +164,22 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
               ),
             ],
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           SizedBox(
             width: 330,
             height: 50,
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Search",
-                prefixIcon: Icon(Icons.search),
+                prefixIcon: const Icon(Icons.search),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: const BorderSide(color: Colors.grey),
                 ),
               ),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Expanded(
             child: ListView(
               children: [
@@ -190,7 +194,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                               height: 148,
                               width: 100,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 209, 208, 208),
+                                color: const Color.fromARGB(255, 209, 208, 208),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
@@ -204,14 +208,14 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                                 ),
                                 Row(
                                   children: [
-                                    Text(
+                                    const Text(
                                       " Spring\n Blossom",
                                       style: TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
-                                    SizedBox(width: 23),
+                                    const SizedBox(width: 23),
                                     InkWell(
                                       onTap: () {
                                         iconcolor_heart1 = Colors.red;
@@ -245,7 +249,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                               height: 148,
                               width: 100,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 209, 208, 208),
+                                color: const Color.fromARGB(255, 209, 208, 208),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
@@ -260,14 +264,14 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                                 ),
                                 Row(
                                   children: [
-                                    Text(
+                                    const Text(
                                       " Golden\n Paradise",
                                       style: TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
-                                    SizedBox(width: 23),
+                                    const SizedBox(width: 23),
                                     InkWell(
                                       onTap: () {
                                         iconcolor_heart2 = Colors.red;
@@ -295,7 +299,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                           ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -307,7 +311,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                               height: 148,
                               width: 100,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 209, 208, 208),
+                                color: const Color.fromARGB(255, 209, 208, 208),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
@@ -322,14 +326,14 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                                 ),
                                 Row(
                                   children: [
-                                    Text(
+                                    const Text(
                                       " Royal\n Splendor",
                                       style: TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
-                                    SizedBox(width: 23),
+                                    const SizedBox(width: 23),
                                     InkWell(
                                       onTap: () {
                                         iconcolor_heart3 = Colors.red;
@@ -363,7 +367,7 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                               height: 148,
                               width: 100,
                               decoration: BoxDecoration(
-                                color: Color.fromARGB(255, 209, 208, 208),
+                                color: const Color.fromARGB(255, 209, 208, 208),
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
@@ -378,14 +382,14 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                                 ),
                                 Row(
                                   children: [
-                                    Text(
+                                    const Text(
                                       " Midnight\n Bloom",
                                       style: TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
-                                    SizedBox(width: 23),
+                                    const SizedBox(width: 23),
                                     InkWell(
                                       onTap: () {
                                         iconcolor_heart4 = Colors.red;
@@ -418,35 +422,8 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
           ),
         ],
       ),
-      // // Favorite Items Page (when selectedIndex is 1)
-      // FavoriteItemsPageView(),
-      // // Account Page (when selectedIndex is 2)
-      // AccountPageView(),
+     
     );
-    //   bottomNavigationBar: BottomNavigationBar(
-    //     type: BottomNavigationBarType.fixed,
-    //     backgroundColor: Colors.white,
-    //     selectedItemColor: Color(0xff1F1D36),
-    //     unselectedItemColor: Colors.grey,
-    //     selectedFontSize: 14,
-    //     unselectedFontSize: 14,
-    //     items: const [
-    //       BottomNavigationBarItem(
-    //         label: "home",
-    //         icon: FaIcon(FontAwesomeIcons.house),
-    //       ),
-    //       BottomNavigationBarItem(
-    //         label: "favorite",
-    //         icon: FaIcon(FontAwesomeIcons.heart),
-    //       ),
-    //       BottomNavigationBarItem(
-    //         label: "account",
-    //         icon: Icon(Icons.person),
-    //       ),
-    //     ],
-    //     currentIndex: selectedIndex,
-    //     onTap: onItemTapped,
-    //   ),
-    // );
+    
   }
 }

@@ -59,7 +59,7 @@ class _LogInViewState extends State<LogInView> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: 120, width: 20),
+              const SizedBox(height: 120, width: 20),
               Image.asset(
                 "assets/logo-flower.png",
                 width: 310,
@@ -67,7 +67,7 @@ class _LogInViewState extends State<LogInView> {
               ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           SizedBox(
             width: 316,
             child: TextFormField(
@@ -87,7 +87,7 @@ class _LogInViewState extends State<LogInView> {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           SizedBox(
             width: 316,
             child: TextFormField(
@@ -107,13 +107,13 @@ class _LogInViewState extends State<LogInView> {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           if (generalError != null)
             Text(
               generalError!,
-              style: TextStyle(color: Colors.red),
+              style: const TextStyle(color: Colors.red),
             ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
               if (validateFields()) {

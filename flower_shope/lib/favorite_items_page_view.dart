@@ -40,7 +40,7 @@ class FavoriteItemsPageView extends StatelessWidget {
                 Container(
                   height: 130,
                   width: MediaQuery.of(context).size.width,
-                  color: Color(0xffFDEEF1),
+                  color: const Color(0xffFDEEF1),
                 ),
                 const Positioned(
                     top: 56,
@@ -76,7 +76,7 @@ class FavoriteItemsPageView extends StatelessWidget {
                     ))
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             Row(
