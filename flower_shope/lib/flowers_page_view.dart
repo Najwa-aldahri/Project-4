@@ -1,3 +1,5 @@
+import 'package:flower_shope/account_page_view.dart';
+import 'package:flower_shope/favorite_items_page_view.dart';
 import 'package:flower_shope/flowers_from_cheaper_view.dart';
 import 'package:flower_shope/flowers_most_expensive_view.dart';
 import 'package:flower_shope/home_page_view.dart';
@@ -44,7 +46,18 @@ class _FlowersPageViewState extends State<FlowersPageView> {
           child: ListView(
             // padding: EdgeInsets.zero,
             children: [
-
+              ListTile(
+                title: const Text('Home Screen'),
+                leading: Icon(Icons.home),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomePageView(),
+                    ),
+                  );
+                },
+              ),
               ExpansionTile(
                 title: Text("Sort by.."),
                 leading: Icon(Icons.filter_alt_rounded),
@@ -56,20 +69,20 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const FlowersPageView()),
+                          builder: (context) => const FlowersPageView(),
+                        ),
                       );
-                    
                     },
                   ),
                   ListTile(
                     title: const Text('From cheaper'),
                     onTap: () {
-                     Navigator.push(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const FlowersFromCheaperView()),
+                          builder: (context) => const FlowersFromCheaperView(),
+                        ),
                       );
-                    
                     },
                   ),
                   ListTile(
@@ -78,20 +91,17 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                const FlowersMostExpensive()),
+                          builder: (context) => const FlowersMostExpensive(),
+                        ),
                       );
                     },
                   ),
                 ],
               ),
               ListTile(
-                contentPadding: EdgeInsets.only(left: 60),
+                contentPadding: EdgeInsets.only(left: 30),
                 title: const Text('Q&A'),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
+                onTap: () {},
               ),
             ],
           ),

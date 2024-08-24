@@ -1,5 +1,8 @@
+import 'package:flower_shope/account_page_view.dart';
+import 'package:flower_shope/favorite_items_page_view.dart';
 import 'package:flower_shope/flowers_most_expensive_view.dart';
 import 'package:flower_shope/flowers_page_view.dart';
+import 'package:flower_shope/home_page_view.dart';
 import 'package:flower_shope/item_page_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -44,6 +47,20 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
           child: ListView(
             // padding: EdgeInsets.zero,
             children: [
+              ListTile(
+                title: const Text('Home Screen'),
+                leading: Icon(Icons.home),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomePageView(),
+                    ),
+                  );
+                },
+              ),
+             
+             
               ExpansionTile(
                 title: Text("Sort by.."),
                 leading: Icon(Icons.filter_alt_rounded),
@@ -55,7 +72,8 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const FlowersPageView()),
+                          builder: (context) => const FlowersPageView(),
+                        ),
                       );
                     },
                   ),
@@ -65,31 +83,28 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                const FlowersFromCheaperView()),
+                          builder: (context) => const FlowersFromCheaperView(),
+                        ),
                       );
                     },
                   ),
                   ListTile(
                     title: const Text('From the most expensive'),
                     onTap: () {
-                       Navigator.push(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) =>
-                                const FlowersMostExpensive()),
+                          builder: (context) => const FlowersMostExpensive(),
+                        ),
                       );
                     },
                   ),
                 ],
               ),
               ListTile(
-                contentPadding: EdgeInsets.only(left: 60),
+                contentPadding: EdgeInsets.only(left: 30),
                 title: const Text('Q&A'),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
+                onTap: () {},
               ),
             ],
           ),
