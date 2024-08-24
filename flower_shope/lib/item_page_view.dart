@@ -1,5 +1,3 @@
-import 'package:flower_shope/account_page_view.dart';
-import 'package:flower_shope/favorite_items_page_view.dart';
 import 'package:flower_shope/home_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

@@ -103,7 +103,10 @@ class _HomePageViewState extends State<HomePageView> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const FlowersPageView()),
+                              builder: (context) =>  FlowersPageView(
+                                    username: widget.username,
+                                    phonenumber: widget.phonenumber,
+                                  )),
                         );
                       },
                       child: Container(

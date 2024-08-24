@@ -1,9 +1,6 @@
-import 'package:flower_shope/account_page_view.dart';
-import 'package:flower_shope/favorite_items_page_view.dart';
 import 'package:flower_shope/flowers_from_cheaper_view.dart';
 import 'package:flower_shope/flowers_page_view.dart';
 import 'package:flower_shope/home_page_view.dart';
-import 'package:flower_shope/item_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -11,7 +8,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 
 class FlowersMostExpensive extends StatefulWidget {
-  const FlowersMostExpensive({super.key});
+  final String username;
+  final String phonenumber;
+
+  const FlowersMostExpensive({
+    Key? key,
+    required this.username,
+    required this.phonenumber,
+  }) : super(key: key);
 
   @override
   State<FlowersMostExpensive> createState() => _FlowersMostExpensiveState();
@@ -35,21 +39,6 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
     });
     super.initState();
   }
-
-  // // List of pages to display
-  // int selectedIndex = 0;
-
-  // final List<Widget> pages = [
-  //   HomePageView(),
-  //   FavoriteItemsPageView(),
-  //   AccountPageView(),
-  // ];
-
-  // void onItemTapped(int index) {
-  //   setState(() {
-  //     selectedIndex = index;
-  //   });
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +73,10 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePageView(phonenumber: "",username: "",),
+                    builder: (context) => HomePageView(
+                      username: widget.username,
+                      phonenumber: widget.phonenumber,
+                    ),
                   ),
                 );
               },
@@ -100,7 +92,10 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersPageView(),
+                        builder: (context) => FlowersPageView(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },
@@ -111,7 +106,10 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersFromCheaperView(),
+                        builder: (context) => FlowersFromCheaperView(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },
@@ -122,7 +120,10 @@ class _FlowersMostExpensiveState extends State<FlowersMostExpensive> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersMostExpensive(),
+                        builder: (context) => FlowersMostExpensive(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },

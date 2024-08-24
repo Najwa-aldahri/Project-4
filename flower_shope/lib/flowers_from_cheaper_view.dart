@@ -9,7 +9,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 
 class FlowersFromCheaperView extends StatefulWidget {
-  const FlowersFromCheaperView({super.key});
+  final String username;
+  final String phonenumber;
+
+  const FlowersFromCheaperView({
+    Key? key,
+    required this.username,
+    required this.phonenumber,
+  }) : super(key: key);
 
   @override
   State<FlowersFromCheaperView> createState() => _FlowersFromCheaperViewState();
@@ -66,7 +73,10 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePageView(phonenumber: "",username: "",),
+                    builder: (context) => const HomePageView(
+                      phonenumber: "",
+                      username: "",
+                    ),
                   ),
                 );
               },
@@ -82,7 +92,10 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersPageView(),
+                        builder: (context) => FlowersPageView(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },
@@ -93,7 +106,10 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersFromCheaperView(),
+                        builder: (context) => FlowersFromCheaperView(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },
@@ -104,7 +120,8 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersMostExpensive(),
+                        builder: (context) =>  FlowersMostExpensive(  username: widget.username,
+                                    phonenumber: widget.phonenumber,),
                       ),
                     );
                   },
@@ -264,16 +281,16 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                               SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
-                                  iconcolor_heart1 = Colors.red;
+                                  iconcolor_heart2 = Colors.red;
                                   setState(() {});
                                 },
                                 onLongPress: () {
-                                  iconcolor_heart1 = Colors.black;
+                                  iconcolor_heart2 = Colors.black;
                                   setState(() {});
                                 },
                                 child: Icon(
                                   Icons.favorite,
-                                  color: iconcolor_heart1,
+                                  color: iconcolor_heart2,
                                   size: 15,
                                 ),
                               ),
@@ -341,16 +358,16 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                               SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
-                                  iconcolor_heart1 = Colors.red;
+                                  iconcolor_heart3 = Colors.red;
                                   setState(() {});
                                 },
                                 onLongPress: () {
-                                  iconcolor_heart1 = Colors.black;
+                                  iconcolor_heart3 = Colors.black;
                                   setState(() {});
                                 },
                                 child: Icon(
                                   Icons.favorite,
-                                  color: iconcolor_heart1,
+                                  color: iconcolor_heart3,
                                   size: 15,
                                 ),
                               ),
@@ -410,16 +427,16 @@ class _FlowersFromCheaperViewState extends State<FlowersFromCheaperView> {
                               SizedBox(width: 23),
                               InkWell(
                                 onTap: () {
-                                  iconcolor_heart1 = Colors.red;
+                                  iconcolor_heart4 = Colors.red;
                                   setState(() {});
                                 },
                                 onLongPress: () {
-                                  iconcolor_heart1 = Colors.black;
+                                  iconcolor_heart4 = Colors.black;
                                   setState(() {});
                                 },
                                 child: Icon(
                                   Icons.favorite,
-                                  color: iconcolor_heart1,
+                                  color: iconcolor_heart4,
                                   size: 15,
                                 ),
                               ),

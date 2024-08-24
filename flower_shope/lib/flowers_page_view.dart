@@ -8,7 +8,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class FlowersPageView extends StatefulWidget {
-  const FlowersPageView({super.key});
+  final String username;
+  final String phonenumber;
+
+  const FlowersPageView({
+    Key? key,
+    required this.username,
+    required this.phonenumber,
+  }) : super(key: key);
 
   @override
   State<FlowersPageView> createState() => _FlowersPageViewState();
@@ -51,7 +58,10 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePageView(phonenumber: "",username: "",),
+                    builder: (context) => HomePageView(
+                      username: widget.username,
+                      phonenumber: widget.phonenumber,
+                    ),
                   ),
                 );
               },
@@ -67,7 +77,10 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersPageView(),
+                        builder: (context) => FlowersPageView(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },
@@ -78,7 +91,10 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersFromCheaperView(),
+                        builder: (context) => FlowersFromCheaperView(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },
@@ -89,7 +105,10 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const FlowersMostExpensive(),
+                        builder: (context) => FlowersMostExpensive(
+                          username: widget.username,
+                          phonenumber: widget.phonenumber,
+                        ),
                       ),
                     );
                   },
@@ -216,16 +235,16 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                           SizedBox(width: 23),
                           InkWell(
                             onTap: () {
-                              iconcolor_heart1 = Colors.red;
+                              iconcolor_heart2 = Colors.red;
                               setState(() {});
                             },
                             onLongPress: () {
-                              iconcolor_heart1 = Colors.black;
+                              iconcolor_heart2 = Colors.black;
                               setState(() {});
                             },
                             child: Icon(
                               Icons.favorite,
-                              color: iconcolor_heart1,
+                              color: iconcolor_heart2,
                               size: 15,
                             ),
                           ),
@@ -266,16 +285,16 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                           SizedBox(width: 23),
                           InkWell(
                             onTap: () {
-                              iconcolor_heart1 = Colors.red;
+                              iconcolor_heart3 = Colors.red;
                               setState(() {});
                             },
                             onLongPress: () {
-                              iconcolor_heart1 = Colors.black;
+                              iconcolor_heart3 = Colors.black;
                               setState(() {});
                             },
                             child: Icon(
                               Icons.favorite,
-                              color: iconcolor_heart1,
+                              color: iconcolor_heart3,
                               size: 15,
                             ),
                           ),
@@ -308,16 +327,16 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                           SizedBox(width: 23),
                           InkWell(
                             onTap: () {
-                              iconcolor_heart1 = Colors.red;
+                              iconcolor_heart4 = Colors.red;
                               setState(() {});
                             },
                             onLongPress: () {
-                              iconcolor_heart1 = Colors.black;
+                              iconcolor_heart4 = Colors.black;
                               setState(() {});
                             },
                             child: Icon(
                               Icons.favorite,
-                              color: iconcolor_heart1,
+                              color: iconcolor_heart4,
                               size: 15,
                             ),
                           ),

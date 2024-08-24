@@ -1,6 +1,5 @@
 import 'package:flower_shope/home_page_view.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LogInView extends StatefulWidget {
   const LogInView({super.key});
@@ -58,52 +57,17 @@ class _LogInViewState extends State<LogInView> {
       body: Column(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 120, width: 20),
-              Text(
-                'ALWAYES',
-                style: GoogleFonts.notoSerif(
-                  textStyle: const TextStyle(
-                    fontSize: 36,
-                    color: Color(0xff1F1D36),
-                    letterSpacing: .5,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-              ),
-              SizedBox(width: 10),
-              Text(
-                "FRESH",
-                style: GoogleFonts.notoSerif(
-                  textStyle: TextStyle(
-                    fontSize: 36,
-                    color: Color(0xff009245),
-                    letterSpacing: .5,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
+              Image.asset(
+                "assets/logo-flower.png",
+                width: 310,
+                height: 310,
               ),
             ],
           ),
-          Row(
-            children: [
-              SizedBox(width: 56),
-              Image.asset("assets/Portal.png", height: 30, width: 30),
-              Text(
-                'FLOWERS',
-                style: GoogleFonts.notoSerif(
-                  textStyle: const TextStyle(
-                    fontSize: 36,
-                    color: Color(0xff1F1D36),
-                    letterSpacing: .5,
-                    fontWeight: FontWeight.normal,
-                  ),
-                ),
-              ),
-              Image.asset("assets/Portal.png", height: 30, width: 30),
-            ],
-          ),
-          SizedBox(height: 70),
+          SizedBox(height: 10),
           SizedBox(
             width: 316,
             child: TextFormField(
