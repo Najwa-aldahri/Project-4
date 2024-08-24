@@ -168,7 +168,10 @@ class _FlowersPageViewState extends State<FlowersPageView> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ItemPageView()),
+                          builder: (context) => ItemPageView(
+                                username: widget.username,
+                                phonenumber: widget.phonenumber,
+                              )),
                     );
                   },
                   child: Container(

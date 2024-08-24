@@ -4,7 +4,14 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ItemPageView extends StatefulWidget {
-  const ItemPageView({super.key});
+  final String username;
+  final String phonenumber;
+
+  const ItemPageView({
+    Key? key,
+    required this.username,
+    required this.phonenumber,
+  }) : super(key: key);
 
   @override
   State<ItemPageView> createState() => _ItemPageViewState();
@@ -117,7 +124,8 @@ class _ItemPageViewState extends State<ItemPageView> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const HomePageView(phonenumber: "",username: "",)),
+                                  builder: (context) =>  HomePageView(   username: widget.username,
+            phonenumber: widget.phonenumber,)),
                             );
                           },
                           style: const ButtonStyle(
