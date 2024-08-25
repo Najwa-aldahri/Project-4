@@ -92,11 +92,12 @@ $ git push
 
 - TabBarView and TabBar: These widgets organize content under tabs, making it easy for users to access different sections such as the description and customer reviews of a flower.
 
-- PageView: Creates a scrollable view that elegantly presents collections of items, enhancing the browsing experience by allowing horizontal navigation through the flower catalog.
+- PageView: Creates a scrollable view that elegantly presents collections of items, enhancing the browsing experience by allowing navigation through the flower catalog.
 
   
 ## External Packages
-- **Google Fonts:**This package allows for the customization of text styles throughout the app, making the font visually appealing and improving readability.
+- **Google Fonts:**
+- This package allows for the customization of text styles throughout the app, making the font visually appealing and improving readability.
 
 - **Awesome Icons:**
   Utilized for enhancing the interface with high-quality icons that improve navigation and overall user experience.
